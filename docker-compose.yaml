@@ -1,0 +1,23 @@
+version: '3.5'
+
+services:
+  happyshare:
+    build:
+      context: https://github.com/ksgyeung/happyshare.github
+      args:
+        - NEXT_PUBLIC_TITLE=Happy Share
+        - NEXT_PUBLIC_HOST_URL=http://127.0.0.1:3000
+        - NEXT_PUBLIC_SOCKET_URL=ws://127.0.0.1:3000
+    ports:
+      - "127.0.0.1:3000:3000"
+    security_opt:
+      - seccomp:unconfined
+      - apparmor:unconfined
+    environment:
+      HS_USERNAME: "admin"
+      HS_PASSWORD: "password"
+      HS_HOSTNAME: "0.0.0.0"
+      HS_PORT: 3000
+    volumes:
+      - "./upload:/opt/happyshare/upload"
+

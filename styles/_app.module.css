@@ -1,0 +1,25 @@
+.content
+{
+    min-height: 280px;
+    margin: 25px auto;
+    max-width: 1280px;
+}
+
+.content > div.content
+{
+    background: #fff;
+}
+
+.content > div
+{
+    margin-bottom: 16px;
+}
+
+.title
+{
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    max-width: 1280px;
+    margin: 0 auto;
+}
