@@ -60,9 +60,8 @@ export default function UploadModal(props: UploadModalProps)
         };
 
         let key: string = '';
-
-        let w = window as any;
-        const socket = w.ssss = io(process.env.NEXT_PUBLIC_SOCKET_URL!,
+        
+        const socket = io(process.env.NEXT_PUBLIC_SOCKET_URL!,
         {
             forceNew: true,
             closeOnBeforeunload: true,
