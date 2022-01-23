@@ -3,7 +3,7 @@ version: '3.5'
 services:
   happyshare:
     build:
-      context: https://github.com/ksgyeung/happyshare.github
+      context: https://github.com/ksgyeung/happyshare.git
       args:
         - NEXT_PUBLIC_TITLE=Happy Share
         - NEXT_PUBLIC_HOST_URL=http://127.0.0.1:3000
